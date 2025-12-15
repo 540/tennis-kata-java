@@ -26,6 +26,10 @@ compile: ## Compilar el código
 	@echo "⚙️  Compilando código..."
 	docker run --rm -v $(PWD)/src:/app/src $(IMAGE_NAME) mvn compile
 
+test: ## Ejecutar los tests
+	@echo "🧪 Ejecutando tests..."
+	docker run --rm -v $(PWD)/src:/app/src $(IMAGE_NAME) mvn test
+
 run: ## Ejecutar el ejemplo de Tennis Game
 	@echo "🎾 Ejecutando ejemplo..."
 	docker run --rm -v $(PWD)/src:/app/src $(IMAGE_NAME) sh -c "mvn compile && java -cp target/classes com.tenniskata.ExampleTennisGame"
