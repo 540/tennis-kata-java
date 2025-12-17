@@ -30,52 +30,23 @@ La puntuación en tenis sigue estas reglas:
 
 ---
 
-Kata de refactorización del juego de tenis en Java con Docker.
+## 📋 Requisitos
 
-## 🐳 Requisitos
-
-- **Docker**
-- **Make**
+- **Java 17** o superior
+- **Maven 3.6+**
 
 ## 🚀 Comandos
 
 ```bash
-# Construir la imagen Docker
-make build
+# Compilar
+mvn compile
 
 # Ejecutar el ejemplo
-make run
+java -cp target/classes com.tenniskata.ExampleTennisGame
 
-# Compilar el código
-make compile
-
-# Abrir shell interactivo
-make shell
+# Ejecutar tests
+mvn test
 
 # Limpiar
-make clean
-
-# Reconstruir desde cero
-make rebuild
+mvn clean
 ```
-
-## 🎾 Probar el Programa
-
-Primero, tenéis que descargar el repositorio y construir la imagen Docker:
-
-```bash
-git clone https://github.com/your-username/tennis-refactoring-kata.git
-cd tennis-refactoring-kata
-make build
-```
-
-## Ejemplo de Uso
-
-El archivo `ExampleTennisGame.java` contiene ejemplos de uso que puedes ejecutar con `make run`.
-
-Este programa demuestra diferentes escenarios del juego:
-- **Juego básico**: Puntuación normal (Love, Fifteen, Thirty, Forty)
-- **Deuce y Advantage**: Empate a 40 y ventajas
-- **Victoria**: Cómo se gana un juego
-
-Puedes modificar este archivo para probar tus propios escenarios mientras refactorizas `TennisGame1.java`.
